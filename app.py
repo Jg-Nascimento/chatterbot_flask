@@ -6,6 +6,12 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 app = Flask(__name__)
 #create chatbot
 englishBot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStorageAdapter")
+'''
+englishBbot = ChatBot("Chatterbot", 
+                     storage_adapter = "chatterbot.storage.MongoDatabaseAdapter",
+                     database = mongodb_name,
+                     database_uri = mongodb_uri)
+'''
 trainer = ChatterBotCorpusTrainer(englishBot)
 trainer.train('chatterbot.corpus.portuguese') #train the chatter bot for pt-br
 
