@@ -1,3 +1,4 @@
+Flask
 spacy
 ChatterBot==1.0.5
 chatterbot-corpus==1.2.0
